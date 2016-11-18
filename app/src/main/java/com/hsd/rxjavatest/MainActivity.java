@@ -18,7 +18,7 @@ import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView mIamge;
+    private ImageView mImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Retrofit.Builder builder = new Retrofit.Builder();
         builder.build();
-        mIamge = (ImageView) findViewById(R.id.image);
+        mImage = (ImageView) findViewById(R.id.iv_image);
 
 
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNext(Drawable value) {
-                mIamge.setImageDrawable(value);
+                mImage.setImageDrawable(value);
             }
 
             @Override
